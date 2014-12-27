@@ -1,23 +1,21 @@
 freeShazam 0.3
 --------------
-This is an implementation of the fast audio identification algorithm design by Shazam.  
-We use a similar technique, but only use FOSS libraries and tools to get the work done.
+Il s'agit d'une implémentation d'un algorithme de reconnaissance audio réalisé par Shazham.  
+Nous utilisons une technique similaire, mais en utilisant certaines libraries existantes.
 
 
 How it Works 
 ------------
-freeShazam is composed by a set of tools for spectrogram analysis, fingerprinting, storage and fast retrieval:
+freeShazam est composé d'une série d'outils d'analyse de spectre, empreinte digitale, stockage et d'extraction rapide :
 
-1. Transform music spectrograms into matrices
-2. Analyze matrices, storing its 'fingerprint' and generating unique hash numbers
-3. Use stored fingerprints and use them for music identifcation
+1. Transforme le spectre audio en données au sein de matrices
+2. Analyse les matrices générées, stocke son empreinte digital et génère un hash unique
+3. Utilise les empreintes digitales stockées pour l'identification de bandes audio
 
 
-Requirements
+Pré-requis
 ------------
-Before you install, make sure you have met the dependencies:
-
-Gstreamer0.10 and its plugins (for the 'good' set)
+Gstreamer0.10 et ses plugins (for the 'good' set)
 Linux 2.6.x (might work under other Unix-flavored systems, but not tested)
 Apache2
 MySQL
@@ -28,18 +26,17 @@ PHP5
 
 How to Install
 --------------
-There is no tarball distribution at this moment, so grab the source code from our Git repository:
-
+Il n'y a pas pour le moment de .tar, récupérez donc directement le code source du répertoire Git :
 git clone git://github.com/unixjazz/free_shazam.git
 
-After making a local copy of freeShazam, place the directory in your Apache public directory (must sit around /var/www/ or something).
-To generate the SQL database structure, use the free_shazam.sql file, located at db/
-Also, set the user/passwd of your MySQL on the file: 'db_connector.php' 
+Après avoir réalisé une copie locale de freeShazam, placez le répertoire dans votre répertoire publique Apache (devant se trouver à /var/www/ ou qq ch de similaire).
+Pour générer la structur de données SQL, utilisez le fichier free_shazam.sql, disponible à db/
+Saisissez également, les user/passwd de votre système MySQL au sein du fichier : 'db_connector.php' 
 
 
 License
 -------
-freeShazam is licensed under GPL, version 2. Read 'copyright' file for the licensing terms.
+freeShazam est sous licence GPL (General Public Licence), version 2. Lisez le fichier 'copyright' pour les termes de cette licence.
 
 
 Authors
